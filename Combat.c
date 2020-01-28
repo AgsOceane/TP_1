@@ -54,13 +54,6 @@ int main(){
 		monsters.mana=50;
 		monsters.range=5;
 		
-	printf("------TEAM CHARACTERISTIC------\n\n");
-	printf("---CHAMAN---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", chaman);
-	
-	printf("---WARRIOR---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", warrior);
-	
-	printf("---ARCHER---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", archer);
-	
 	
     
 	
