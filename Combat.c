@@ -11,7 +11,7 @@ struct Characteristic{
 typedef struct Characteristic characteristic ;
 
 int main(){
-    //Structure du premier personnage
+    
     int varDamage = 25;
     int varMonsterDamage = 30; 
     int actionPlayer;
@@ -29,7 +29,7 @@ int main(){
     
     int monsterState;
     int playerState;
-	
+	//Structure des personnages
   characteristic chaman;
 		chaman.lp=150;
 		chaman.damage=20;
@@ -48,7 +48,7 @@ int main(){
 		archer.mana=50;
 		archer.range=10;
 		
-	printf("---CHAMAN---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", chaman);
+	printf("test---CHAMAN---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", chaman);
 	
 	printf("---WARRIOR---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", warrior);
 	
