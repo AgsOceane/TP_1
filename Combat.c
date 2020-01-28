@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int main(){
+    //Structure du premier personnage
     
     int varDamage = 25;
     int varMonsterDamage = 30; 
