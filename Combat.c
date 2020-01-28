@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct Characteristic{
+	int lp;
+	int damage;
+	int mana;
+	int range;
+};
+
+typedef struct Characteristic characteristic ;
+
 int main(){
     //Structure du premier personnage
-    
     int varDamage = 25;
     int varMonsterDamage = 30; 
     int actionPlayer;
-    
     
     int maxHealth = 200;
     int curMonsterLp = 200;
@@ -22,8 +29,35 @@ int main(){
     
     int monsterState;
     int playerState;
+	
+  characteristic chaman;
+		chaman.lp=150;
+		chaman.damage=20;
+		chaman.mana=70;
+		chaman.range=5;
+	
+	characteristic warrior;
+		warrior.lp=200;
+		warrior.damage=35;
+		warrior.mana=40;
+		warrior.range=5;
+		
+	characteristic archer;
+		archer.lp=175;
+		archer.damage=30;
+		archer.mana=50;
+		archer.range=10;
+		
+	printf("---CHAMAN---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", chaman);
+	
+	printf("---WARRIOR---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", warrior);
+	
+	printf("---ARCHER---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", archer);
+	
+	
     
-    printf ("\n""You start the game with 100 life points""\n\n""Here is a monster with 200 life point, Defeat him !""\n\n""Enter 1 to attack the monster""\n\n""2 to hide yourself behind a bloc of rock""\n\n""3 to use a special poison attack\n\n""or 4 to heal yourself \n\n" );
+	
+    printf ("\n""You start the game with 200 life points""\n\n""Here is a monster with 200 life point, Defeat him !""\n\n""Enter 1 to attack the monster""\n\n""2 to hide yourself behind a bloc of rock""\n\n""3 to use a special poison attack\n\n""or 4 to heal yourself \n\n" );
   
     
     
