@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct Characteristic{
+	int lp;
+	int damage;
+	int mana;
+	int range;
+};
+
+typedef struct Characteristic characteristic ;
+
 int main(){
-    //Structure du premier personnage
     
     int varDamage = 25;
     int varMonsterDamage = 30; 
     int actionPlayer;
-    
     
     int maxHealth = 200;
     int curMonsterLp = 200;
@@ -22,8 +29,33 @@ int main(){
     
     int monsterState;
     int playerState;
+	//Structure des personnages
+  characteristic shaman;
+		shaman.lp=150;
+		shaman.mana=100;
+		shaman.range=5;
+	
+	characteristic warrior;
+		warrior.lp=200;
+		warrior.damage=35;
+		warrior.range=5;
+		
+	characteristic archer;
+		archer.lp=150;
+		archer.damage=20;
+		archer.mana=50;
+		archer.range=10;
+		
+	printf("---SHAMAN---\n Life Point : %d\n Mana : %d\n Range : %d\n\n The Chaman have the capacity to heal himslef or his friend by using an antidote.\n He can also poisoned a monster by using a poisoned\n\n", chaman);
+	
+	printf("---WARRIOR---\n Life Point : %d\n Attack : %d\n Range : %d\n\n The warrior have the capacity to attack only one monster per turn but his strenght is stronger than the other\n He can also defend himself or his friend with his shield\n\n", warrior);
+	
+	printf("---ARCHER---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n The archer have the capacity to use his bow to attack either a single monster or to attack several monster", archer);
+	
+	
     
-    printf ("\n""You start the game with 100 life points""\n\n""Here is a monster with 200 life point, Defeat him !""\n\n""Enter 1 to attack the monster""\n\n""2 to hide yourself behind a bloc of rock""\n\n""3 to use a special poison attack\n\n""or 4 to heal yourself \n\n" );
+	
+    printf ("\n""You start the game with 200 life points""\n\n""Here is a monster with 200 life point, Defeat him !""\n\n""Enter 1 to attack the monster""\n\n""2 to hide yourself behind a bloc of rock""\n\n""3 to use a special poison attack\n\n""or 4 to heal yourself \n\n" );
   
     
     
@@ -37,7 +69,7 @@ int main(){
                 }
          //Une fois par tour le monstre perdra 5pv que si le joueur l'a empoisonné une fois
          
-                manaPlayer = manaPlayer + 1;
+                
                 printf("ManaPlayer = %d \n\n",manaPlayer);
                 printf("ManaMonster = %d \n\n",manaMonster);
          
@@ -122,6 +154,8 @@ int main(){
 
 
                     }
+         
+         manaPlayer = manaPlayer + 1;
          
              }
     
