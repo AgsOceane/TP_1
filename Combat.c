@@ -23,7 +23,7 @@ int main(){
     int monsterState;
     int playerState;
     
-    printf ("\n""You start the game with 100 life points""\n\n""Here is a monster with 200 life point, Defeat him !""\n\n""Enter 4 to attack the monster""\n\n""5 to hide yourself behind a bloc of rock""\n\n""6 to use a special poison attack\n\n" );
+    printf ("\n""You start the game with 100 life points""\n\n""Here is a monster with 200 life point, Defeat him !""\n\n""Enter 1 to attack the monster""\n\n""2 to hide yourself behind a bloc of rock""\n\n""3 to use a special poison attack\n\n""or 4 to heal yourself \n\n" );
   
     
     
@@ -65,21 +65,21 @@ int main(){
                 printf("You didn't tape a correct number, nothing happened");
                 break;
                         
-                case 4:
+                case 1:
                 curMonsterLp = curMonsterLp - varDamage;
                 printf("You inflict 25 damage to the monster, keep going!""\n""There's %d left""\n""\n", curMonsterLp);
                 break;
                     
-                case 5:
+                case 2:
                 printf("You are behind a wall\n",curHealth);   
                 break;
                 
-                case 6:
+                case 3:
                 printf("You poisoned the monster he will loose 5lp per turn \n");
                 monsterState = 40;
                 break;
                 
-                case 7:
+                case 4:
                 if (playerState == 50 && manaPlayer >= 10){
                     playerState = 0;
                     printf("You're healed !\n\n");
