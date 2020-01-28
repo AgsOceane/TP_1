@@ -48,7 +48,14 @@ int main(){
 		archer.mana=50;
 		archer.range=10;
 		
-	printf("test---CHAMAN---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", chaman);
+	characteristic monsters;
+		monsters.lp=200;
+		monsters.damage=30;
+		monsters.mana=50;
+		monsters.range=5;
+		
+	printf("------TEAM CHARACTERISTIC------\n\n");
+	printf("---CHAMAN---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", chaman);
 	
 	printf("---WARRIOR---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", warrior);
 	
@@ -57,7 +64,7 @@ int main(){
 	
     
 	
-    printf ("\n""You start the game with 200 life points""\n\n""Here is a monster with 200 life point, Defeat him !""\n\n""Enter 1 to attack the monster""\n\n""2 to hide yourself behind a bloc of rock""\n\n""3 to use a special poison attack\n\n""or 4 to heal yourself \n\n" );
+    printf ("THREE monsters Appears Defeat them !""\n\n""---MONSTER---\n Life Point : %d\n Attack : %d\n Mana : %d\n Range : %d\n\n", monsters);
   
     
     
