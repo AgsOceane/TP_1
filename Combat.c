@@ -7,6 +7,7 @@ struct Characteristic{
 	int mana;
 	int range;
 	int state;
+	int level;
 };
 
 typedef struct Characteristic characteristic ;
@@ -20,10 +21,12 @@ int main(){
 		int actionMonster1;
 		int actionMonster2;
 		int actionMonster3;
+		int xp;
 
     int useMana = 10;
     int poison = 5;
     int antidote;
+
 
 
 
@@ -35,6 +38,7 @@ int main(){
 		shaman.mana=100;
 		shaman.range=5;
 		shaman.state;
+		shaman.level = 0;
 
 	characteristic warrior;
 		warrior.lp=200;
@@ -42,13 +46,15 @@ int main(){
 		warrior.mana=40;
 		warrior.range=5;
 		warrior.state;
+		warrior.level = 0;
 
 	characteristic archer;
 		archer.lp=175;
-		archer.damage=30;
+		archer.damage=15;
 		archer.mana=50;
 		archer.range=10;
 		archer.state;
+		archer.level =0;
 
 
 	characteristic team;
@@ -118,16 +124,14 @@ int main(){
 
 
 
-              /*  if (monsterState == 40 && manaPlayer >= 10){
-                    manaPlayer = manaPlayer - useMana;
-                    curMonsterLp = curMonsterLp - poison;
-                    printf("The monster is poisoned, he lost 5Lp \n, he is now %d\n",curMonsterLp);
+              /*  if (monsters.state == 50){
+                    monsters.lp = monsters.lp - poison;
+                    printf("The monsters are poisoned, they lost 5Lp \n, they are now %d, %d, %d \n",monster1.lp, monster2.lp, monster3.lp);
 
 
-                if (playerState == 50 && manaMonster >= 10){
-                    manaMonster = manaMonster - useMana;
-                    curHealth = curHealth - poison;
-                    printf("You are poisoned, you lost 5Lp \n, you're now %d",curHealth);
+                if (team.state == 50){
+                    team.lp = team.lp - poison;
+                    printf("You are poisoned, you lost 5Lp \n, you're now %d",team.lp);
                 } */
 
                 printf("__________________________________""\n");
@@ -141,54 +145,95 @@ int main(){
                 switch (actionWarrior){
 
                 default:
-                printf("You didn't tape a correct number, nothing happened");
+                printf("You didn't tape a correct number, nothing happened\n");
                 break;
 
                 case 1:
-                printf("You inflict 25 damage to the monster, keep going!""\n""There's %d left""\n""\n");
+
+								if(targetMonster == 1){
+									monster1.lp = monster.lp - warrior.damage;
+								}
+								else if(targetMonster == 2){
+									monster2.lp = monster.lp - warrior.damage;
+								}
+								else if(targetMonster == 3){
+									monster3.lp = monster.lp - warrior.damage;
+								}
+							}
+                printf("You inflict 35 damage to the monster n°%d, keep going!""\n""\n""\n" targetMonster,);
                 break;
 
                 case 2:
-                printf("You are behind a wall\n");
+                printf("You are behind your shield\n");
                 break;
 
                 }
 
-								switch (actionArcher){
-
-                default:
-                printf("You didn't tape a correct number, nothing happened");
-                break;
-
-                case 1:
-                printf("You inflict 25 damage to the monster, keep going!""\n""There's %d left""\n""\n");
-                break;
-
-                case 2:
-                printf("You are behind a wall\n");
-                break;
-							}
-
 								switch (actionShaman){
 
                 default:
-                printf("You didn't tape a correct number, nothing happened");
+                printf("You didn't tape a correct number, nothing happened\n");
                 break;
 
                 case 1:
-                printf("You poisoned the monster he will loose 5lp per turn \n");
+								if(shaman.mana => 10){
+									if(targetMonster == 1){
+										monster1.state == 50;
+									}
+									else if(targetMonster == 2){
+										monster2.state == 50;
+									}
+									else if(targetMonster == 3){
+										monster3.state == 50;
+									}
+								}
+
+                printf("You poisoned the monster n° %d, he will loose 5lp per turn \n", targetMonster);
 
                 break;
 
-                case 2:
-
-                if (team.state == 50 && shaman.mana >= 10){
+								case 2:
+								if (team.state == 50 && shaman.mana >= 10){
                     team.state = 0;
                     printf("You're healed !\n\n");
                 }
                 break;
 
               }
+
+							switch (actionArcher){
+
+							default:
+							printf("You didn't tape a correct number, nothing happened\n");
+							break;
+
+							case 1:
+								if(targetMonster == 1){
+									monster1.lp = monster.lp - archer.damage;
+								}
+								else if(targetMonster == 2){
+									monster2.lp = monster.lp - archer.damage;
+								}
+								else if(targetMonster == 3){
+									monster3.lp = monster.lp - archer.damage;
+								}
+
+							}
+							printf("Your archer inflict 15 damage to the monster n° %d, keep going!""\n""There's %d left""\n""\n",targetMonster);
+							break;
+
+							case 2:
+								if(archer.mana > 10){
+							monsters.lp = monsters.lp - archer.damage
+							}
+							printf("You inflict 15 damage to the monsters\n");
+							break;
+						}
+
+						for(xp = 100){
+							team.level == 5;
+						}
+
 
 
               /*  switch (actionMonster1){
@@ -226,17 +271,17 @@ int main(){
 							} */
 
 
-        // team.mana = team.mana + 1;
+         team.mana = team.mana + 1;
 
 
              }
 
 
-         /*if (curMonsterLp <= 0){
+         if (monsters.lp <= 0){
 
-           printf ("The monster is now dead, congratulation !");
+           printf ("The monsters are now dead, congratulation !");
         }
-        else if (curHealth <= 0)
+        else if (team.lp <= 0)
         {
             printf ("Oh crap, you died !");
 
