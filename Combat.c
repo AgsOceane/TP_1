@@ -133,7 +133,9 @@ int main(){
                 printf("__________________________________""\n");
 
 
-                 scanf ("%d" "%d""%d", &actionArcher, &actionShaman, &actionWarrior);
+                 scanf ("%d", &actionWarrior);
+								 scanf ("%d", &actionShaman);
+								 scanf ("%d", &actionArcher);
                  printf ("\n");
 
                 switch (actionWarrior){
